@@ -1,0 +1,10 @@
+E:\Programming\Libaries\C#\LCModManager\LCModManager\bin\Debug\LCModManager.exe.config
+E:\Programming\Libaries\C#\LCModManager\LCModManager\bin\Debug\LCModManager.exe
+E:\Programming\Libaries\C#\LCModManager\LCModManager\bin\Debug\LCModManager.pdb
+E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.csproj.AssemblyReference.cache
+E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.Properties.Resources.resources
+E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.csproj.GenerateResource.cache
+E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.csproj.CoreCompileInputs.cache
+E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.exe
+E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.pdb
+E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.MainFrm.resources
