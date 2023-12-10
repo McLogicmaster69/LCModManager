@@ -1,4 +1,5 @@
-﻿using LCModManager.Lists;
+﻿using LCModManager.IO;
+using LCModManager.Lists;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,9 @@ namespace LCModManager
                 });
             _listViewManager.UpdateWidth(ModList.Width);
             _lastWindowState = WindowState;
+
+            FileManager.InitDirectories();
+            FileManager.OpenAllModCollections();
         }
 
         private void MainFrm_Resize(object sender, EventArgs e)
@@ -44,6 +48,11 @@ namespace LCModManager
         private void MainFrm_ResizeEnd(object sender, EventArgs e)
         {
             _listViewManager.UpdateWidth(ModList.Width);
+        }
+
+        private void CreateCollectionBtn_Click(object sender, EventArgs e)
+        {
+            FileManager.ConvertDLLsToCollection();
         }
     }
 }

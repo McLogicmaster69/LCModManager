@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LCModManager
+namespace LCModManager.Mods
 {
-    public class Mod
+    public static class ModStorage
     {
-        public readonly string ModPath;
+        private static List<Mod> _mods = new List<Mod>();
     }
 }
