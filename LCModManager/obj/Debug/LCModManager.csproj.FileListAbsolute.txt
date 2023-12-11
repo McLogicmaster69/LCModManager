@@ -8,3 +8,4 @@ E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.cspr
 E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.exe
 E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.pdb
 E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.MainFrm.resources
+E:\Programming\Libaries\C#\LCModManager\LCModManager\obj\Debug\LCModManager.Lists.SteamFolderInput.resources

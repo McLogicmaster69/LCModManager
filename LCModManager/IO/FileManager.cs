@@ -59,5 +59,34 @@ namespace LCModManager.IO
         }
 
         public static bool CheckForSteamFile() => File.Exists(STEAM_FOLDER_FILE);
+
+        public static List<Mod> GetMods() 
+        {
+            List<Mod> output = new List<Mod>();
+            GetAllModsInFolder(new DirectoryInfo(FULL_DLL_PATH), output, FULL_DLL_PATH + "/");
+            return output;
+        } 
+
+        private static void GetAllModsInFolder(DirectoryInfo dir, List<Mod> mods, string directory)
+        {
+            foreach (DirectoryInfo info in dir.GetDirectories())
+            {
+                GetAllModsInFolder(info, mods, $"{directory}{info.Name}/");
+            }
+            foreach (FileInfo file in dir.GetFiles("*.dll"))
+            {
+                FileStream readStream = file.OpenRead();
+                List<byte> bytes = new List<byte>();
+                while (true)
+                {
+                    int nextByte = readStream.ReadByte();
+                    if (nextByte == -1)
+                        break;
+                    bytes.Add((byte)nextByte);
+                }
+                readStream.Close();
+                mods.Add(new Mod(directory, file.Name.Substring(0, file.Name.Length - 4)));
+            }
+        }
     }
 }

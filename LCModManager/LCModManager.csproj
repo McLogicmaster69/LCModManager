@@ -52,6 +52,12 @@
     <Compile Include="Lists\ListColumnDetails.cs" />
     <Compile Include="Lists\ListViewManager.cs" />
     <Compile Include="Lists\ModListViewManager.cs" />
+    <Compile Include="Lists\SteamFolderInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\SteamFolderInput.Designer.cs">
+      <DependentUpon>SteamFolderInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     <Compile Include="Mods\ModStorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lists\SteamFolderInput.resx">
+      <DependentUpon>SteamFolderInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </EmbeddedResource>

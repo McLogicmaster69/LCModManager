@@ -1,10 +1,12 @@
 ﻿using LCModManager.IO;
 using LCModManager.Lists;
+using LCModManager.Mods;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +33,14 @@ namespace LCModManager
 
             FileManager.InitDirectories();
             FileManager.OpenAllModCollections();
+
+            RefreshList();
+
+            if (!File.Exists("steampath.txt"))
+            {
+                SteamFolderInput sfi = new SteamFolderInput();
+                sfi.Show();
+            }
         }
 
         private void MainFrm_Resize(object sender, EventArgs e)
@@ -53,6 +63,17 @@ namespace LCModManager
         private void CreateCollectionBtn_Click(object sender, EventArgs e)
         {
             FileManager.ConvertDLLsToCollection();
+            CollectionStatusText.Text = "Successfully created collection";
+        }
+
+        private void RefreshList()
+        {
+            ModList.Items.Clear();
+            List<Mod> mods = FileManager.GetMods();
+            foreach(Mod mod in mods)
+            {
+                _listViewManager.AddMod(mod);
+            }
         }
     }
 }

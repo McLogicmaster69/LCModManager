@@ -33,6 +33,7 @@ namespace LCModManager
             this.LaunchModdedBtn = new System.Windows.Forms.Button();
             this.ModList = new System.Windows.Forms.ListView();
             this.CreateCollectionBtn = new System.Windows.Forms.Button();
+            this.CollectionStatusText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LaunchVanillaButton
@@ -66,7 +67,7 @@ namespace LCModManager
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ModList.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ModList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ModList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.ModList.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.ModList.HideSelection = false;
             this.ModList.Location = new System.Drawing.Point(181, 12);
             this.ModList.Name = "ModList";
@@ -88,16 +89,29 @@ namespace LCModManager
             this.CreateCollectionBtn.UseVisualStyleBackColor = false;
             this.CreateCollectionBtn.Click += new System.EventHandler(this.CreateCollectionBtn_Click);
             // 
+            // CollectionStatusText
+            // 
+            this.CollectionStatusText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CollectionStatusText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.CollectionStatusText.ForeColor = System.Drawing.Color.Lime;
+            this.CollectionStatusText.Location = new System.Drawing.Point(12, 369);
+            this.CollectionStatusText.Name = "CollectionStatusText";
+            this.CollectionStatusText.Size = new System.Drawing.Size(163, 44);
+            this.CollectionStatusText.TabIndex = 5;
+            this.CollectionStatusText.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(507, 458);
+            this.Controls.Add(this.CollectionStatusText);
             this.Controls.Add(this.CreateCollectionBtn);
             this.Controls.Add(this.ModList);
             this.Controls.Add(this.LaunchModdedBtn);
             this.Controls.Add(this.LaunchVanillaButton);
+            this.MinimumSize = new System.Drawing.Size(523, 497);
             this.Name = "MainFrm";
             this.Text = "Lethal Company Mod Manager";
             this.ResizeEnd += new System.EventHandler(this.MainFrm_ResizeEnd);
@@ -111,6 +125,7 @@ namespace LCModManager
         private System.Windows.Forms.Button LaunchModdedBtn;
         private System.Windows.Forms.ListView ModList;
         private System.Windows.Forms.Button CreateCollectionBtn;
+        private System.Windows.Forms.Label CollectionStatusText;
     }
 }
 

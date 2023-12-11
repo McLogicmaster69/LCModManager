@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LCModManager.Mods;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,7 @@ namespace LCModManager.Lists
         public ModListViewManager(ListView list, int overflowColumn, ListColumnDetails[] columns) : base(list, overflowColumn, columns)
         {
         }
+
+        public void AddMod(Mod mod) => AddItem(new string[2] { mod.ModName, "" });
     }
 }
